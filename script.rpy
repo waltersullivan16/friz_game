@@ -1,21 +1,20 @@
 ﻿label start:
     #jump test
     scene background bedroom with fade
-    show friz otojasleeping with easeinbottom
+    show friz otojasleeping at Position(xpos=0.4) with easeinbottom
     pause 1.0
-    show friz otoja at Position(xpos=0.4)
+    show friz otoja
     pause 1.0
     show friz otoja_talking
     show background bedroom blurr
 
     Friz "Nic nie stawia na nogi lepiej niż świadomość bycia multimiliardem."
-    show friz main
+    show friz otoja
     pause 1.0
     show friz main_talking
     Friz "Niestety nie każdy dysponuje budżetem pozwalającym na tego typu zastrzyk energii."
-    #cshow friz mainz at left with move
 
-    show nowciax main_talking at farright with moveinbottom
+    show nowciax main_talking at Position(xpos=0.8) with moveinbottom
     Nowciax "Nie martwcie się jednak niezamożne istoty, wasza dobroduszna ekipa znalazła remedę na wasze problemy, mianowicie..."
     show nowciax
 
@@ -23,7 +22,6 @@
     Friz "Zakup mojego kursu."
     show friz main
 
-    show nowciax kropla
     Nowciax "..."
     pause 1.0
     show nowciax main_talking
