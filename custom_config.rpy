@@ -8,19 +8,26 @@ define gui.name_text_size = 45
 define gui.dialogue_xpos = 400
 
 style window:
-    background Image("gui/textbox/dq.png", xalign=0.5, yalign=0.5)
+    background Frame("gui/textbox/dq.png")
+    yalign 1.0
+    #left_margin 100
+    ysize 300
 
 style namebox:
-    xsize 450
-    ysize 160
-    xalign 0.275
-    yalign 0.3
-    #background Frame("gui/textbox/namebox.png")
+#    xpos gui.name_xpos
+#    ypos gui.name_ypos
+#    #background Frame("gui/textbox/nb.png")#, gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+#    #padding gui.namebox_borders.padding
+    xalign 0.2
+    yalign 0.14
+
 
 style say_label:
-    xalign 0.6
-    yalign 0.3
+    properties gui.text_properties("name", accent=True)
+
 
 style say_dialogue:
-    xpos 400
+    properties gui.text_properties("dialogue")
+    xpos 300
     yalign 0.6
+    xsize gui.dialogue_width

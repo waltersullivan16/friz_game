@@ -1,33 +1,34 @@
 ﻿label start:
-    #jump test
+    jump test
+    return
     scene background bedroom with fade
-    show friz otojasleeping at Position(xpos=0.4) with easeinbottom
+    show friz otojasleeping at pos_friz with easeinbottom
     pause 1.0
     show friz otoja
     pause 1.0
-    show friz otoja_talking
     show background bedroom blurr
+    #show friz otoja_talking
 
     Friz "Nic nie stawia na nogi lepiej niż świadomość bycia multimiliardem."
     show friz otoja
     pause 1.0
-    show friz main_talking
+    #show friz main_talking
     Friz "Niestety nie każdy dysponuje budżetem pozwalającym na tego typu zastrzyk energii."
 
-    show nowciax main_talking at Position(xpos=0.8) with moveinbottom
+    show nowciax main_talking at pos_nowciax with moveinbottom
     Nowciax "Nie martwcie się jednak niezamożne istoty, wasza dobroduszna ekipa znalazła remedę na wasze problemy, mianowicie..."
-    show nowciax
+    #show nowciax
 
-    show friz main_talking
+    #show friz main_talking
     Friz "Zakup mojego kursu."
-    show friz main
+    #show friz main
 
     Nowciax "..."
     pause 1.0
     show nowciax main_talking
     Nowciax "Najnowszy energetyk ekipy"
     "EKIPUP" with vpunch
-    show nowciax main
+    #show nowciax main
 
     show friz main_talking
     Friz "Montażysta, reklame poprosze."
