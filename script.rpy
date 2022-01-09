@@ -1,21 +1,19 @@
 ﻿label start:
     jump test
-    return
     scene background bedroom with fade
-    show friz otojasleeping at pos_friz with easeinbottom
+    show friz otojasleeping with easeinbottom
     pause 1.0
-    show friz otoja
+    show friz otojaa
     pause 1.0
     show background bedroom blurr
     #show friz otoja_talking
 
     Friz "Nic nie stawia na nogi lepiej niż świadomość bycia multimiliardem."
-    show friz otoja
     pause 1.0
     #show friz main_talking
     Friz "Niestety nie każdy dysponuje budżetem pozwalającym na tego typu zastrzyk energii."
 
-    show nowciax main_talking at pos_nowciax with moveinbottom
+    show nowciax main at pos_nowciax with moveinbottom
     Nowciax "Nie martwcie się jednak niezamożne istoty, wasza dobroduszna ekipa znalazła remedę na wasze problemy, mianowicie..."
     #show nowciax
 
@@ -25,12 +23,10 @@
 
     Nowciax "..."
     pause 1.0
-    show nowciax main_talking
     Nowciax "Najnowszy energetyk ekipy"
-    "EKIPUP" with vpunch
+    #show "EKIPUP" with vpunch
     #show nowciax main
 
-    show friz main_talking
     Friz "Montażysta, reklame poprosze."
 
     #$ renpy.movie_cutscene("ekipup.webm")

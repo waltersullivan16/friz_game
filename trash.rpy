@@ -1,10 +1,36 @@
-### PYTHON FUNCTIONS
+###   CHARACTERS   ###
+
+# STATIC #
+
+image fr = LiveComposite(
+    (600,600),
+    (0,0), "friz main",
+    (20,20), ConditionSwitch(
+    "abla=='a'", "friz_talking",
+    "'True'", "usti"
+    )
+   )
+
+transform a:
+    xpos 1000
+    linear 1 yanchor -400
+    pause 2
+    repeat
+
+
+image t:
+    alpha 1.0
+    "usti"
+    0.1
+    alpha 0.0
+    0.1
+    repeat
+image sweatdropp = At("sweatdrop", a)
+
+image ss = VBox(
+    "friz main",
+    "sweatdropp")
 init python:
-    import os
-    import logging
-    import string
-    from itertools import chain
-    from functools import partial
     GAME_PATH = "/home/akechi/lajno/frizzzz/game"
     IMAGES_PATH = os.path.join(GAME_PATH, "images")
     MAIN_IMAGES = lambda character: os.path.join(IMAGES_PATH, character, "main")
@@ -39,22 +65,27 @@ init python:
     def talk_anim(character, state):
         template = ["{} {}".format(character, state), 0.1, "{} {}_talking".format(character, state), 0.1]
         return Animation(*template)
+    from collections import defaultdict
+    class Characterr:
+        def __init__(self, name, image, color='#000000', pos=Position(xpos=0.5)):
+            self.name = name
+            self.image = image
+            self.color = color
+            self.pos = pos
+            self.char = Character(name, image=image, callback=partial(char_talking, self), who_color=color)
+            self.tags = {"body": "main", "mouth": "closed", "reaction": "normal"}
 
-    def talking_sprite(character, state):
-        return "{} {}_talking".format(character, state)
+        def __str__(self):
+            return "{} {}".format(self.image, " ".join(self.tags.values()))
 
-    def char_talking(character, event, **kwargs):
-        attr = renpy.get_attributes(character)
-        if attr is None:
-            logging.info("character {}".format(character))
-            return
-        logging.info("EVEEEENT {} kwargs {} attr {} {}".format(event, kwargs, attr, character))
-        talking_sprite = "{} {}_talking".format(character, attr[0])
-        if event == "end":
-            renpy.hide(talking_sprite)
-        elif event=="show":
-            renpy.show(talking_sprite)
+        def show(self, mood, *kwargs):
+            for (k, i) in mood.items():
+                self.tags[k] = i
+            renpy.show(str(self), at_list=[self.pos])
+        def talk(self):
+            self.show({"mouth": "open"})
 
-
-    define.move_transitions("ease", 1.6)
-    friz_dict = { "main": 'friz main_talking', "otoja": 'friz otoja_talking'}
+        def stop_talking(self):
+            self.show({"mouth": "closed"})
+    #Frizz = Characterr("FRIZ", image="friz", color='#000000')
+    #Nowciaxx = Characterr("NOWCIAX", image="nowciax", color='#05232f', pos=pos_nowciax)

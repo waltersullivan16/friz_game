@@ -1,13 +1,14 @@
 label test:
     $ abla = "a"
     scene background bedroom with fade
-    show fr as ff
-    show nowciax main behind ff
+    #$ Friz.show({"body": "otoja"})
+    #$ renpy.with_statement(Fade(0.5, 0.0, 0.5))
+    show friz otoja with easeinbottom
+    Friz "fdfds"
+    #show fr as ff
+    #show nowciax main behind ff
     #show sweatdropp behind ff at a
-    show ss
-    Friz "Ddsdsa"
+    #show ss
     #show frizl maini angry
     #show frizl angry
-    Friz "Dsadsd"
     #show frizl otoja_talking open
-    Friz "Dsadsd"
