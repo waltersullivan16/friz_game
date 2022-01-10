@@ -6,7 +6,6 @@
     show friz otojaa
     pause 1.0
     show background bedroom blurr
-    #show friz otoja_talking
 
     Friz "Nic nie stawia na nogi lepiej niż świadomość bycia multimiliardem."
     pause 1.0
@@ -37,7 +36,9 @@
     Nowciax "Ja natomiast preferuję truskawkę."
     Friz "Koniecznie dajcie nam znać w komentarzach, do którego teamu należycie: #teamtruskawka czy #teamcytryna."
     Friz "A teraz przejdźmy już do meritum."
-# czołowecdzka? nie mamy szlag!
+    Friz "Montażysta, czołóweczkę poproszę."
+    pause 1.0
+    Friz "Jak to nie mamy czołóweczki?"
 
     Friz "Mam nadzieję, że przygotowaliście się już na tsunami dobrej zabawy, bo przygotowaliśmy dziś dla was coś specalneego."
     Friz "Odwiedzimy miejsce zupełnie oderwane od rzeczywistości."
