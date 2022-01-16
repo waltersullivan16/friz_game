@@ -1,27 +1,35 @@
 ﻿label start:
-    jump test
+    #jump test
     scene background bedroom with fade
+    show screen z
     show friz otojasleeping with easeinbottom
+    pause 2.0
+    show friz otojanotsleeping
     pause 1.0
-    show friz otojaa
-    pause 1.0
+    show friz otoja
     show background bedroom blurr
 
     Friz "Nic nie stawia na nogi lepiej niż świadomość bycia multimiliardem."
     pause 1.0
-    #show friz main_talking
+    show friz main
     Friz "Niestety nie każdy dysponuje budżetem pozwalającym na tego typu zastrzyk energii."
 
-    show nowciax main at pos_nowciax with moveinbottom
+    transform frizi:
+        linear 1.0 xanchor 100
+        pause 1.0
+    show friz at START_POS_FRIZ with move
+
+    show nowciax at START_POS_NOWCIAX with moveinbottom
     Nowciax "Nie martwcie się jednak niezamożne istoty, wasza dobroduszna ekipa znalazła remedę na wasze problemy, mianowicie..."
     #show nowciax
 
     #show friz main_talking
     Friz "Zakup mojego kursu."
     #show friz main
-
+    show nowciax kropla angry
     Nowciax "..."
     pause 1.0
+    show nowciax opowiadajacy -angry
     Nowciax "Najnowszy energetyk ekipy"
     #show "EKIPUP" with vpunch
     #show nowciax main
@@ -96,4 +104,6 @@ label bazar:
     Friz "Jak widać urodzeni z nas konfidenci."
     Friz "Skońćzmy już ten przydługi wstęp i bierzmy się do dzieła!"
 
+    return
+label end:
     return

@@ -11,11 +11,6 @@ image fr = LiveComposite(
     )
    )
 
-transform a:
-    xpos 1000
-    linear 1 yanchor -400
-    pause 2
-    repeat
 
 
 image t:
@@ -25,7 +20,6 @@ image t:
     alpha 0.0
     0.1
     repeat
-image sweatdropp = At("sweatdrop", a)
 
 image ss = VBox(
     "friz main",
