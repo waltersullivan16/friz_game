@@ -1,17 +1,13 @@
 label test:
-    $ abla = "a"
     scene background bedroom with a
+    show screen z
 
     #$ Friz.show({"body": "otoja"})
     #$ renpy.with_statement(Fade(0.5, 0.0, 0.5))
-    show friz otojasleeping:
-        zoom 2.0
-    pause 1.0
     show friz otoja
-    pause 1.0
-    show friz main:
-        ease 1.0 zoom 1.3
-    Friz "dsaehfsdjhfjskdfhjsdkfhjksd fdshdsjkfhsdjkfh s"
+    $condition=1
+    #show reactions luv behind friz at Position(xpos=0.4, ypos=0.4) zorder 10
+    #Friz "dsaehfsdjhfjskdfhjsdkfhjksd fdshdsjkfhsdjkfh s"
     pause 1.0
     Friz "dsaehfsdjhfjskdfhjsdkfhjksd fdshdsjkfhsdjkfh s"
 #    show glowing:

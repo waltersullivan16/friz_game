@@ -3,20 +3,17 @@
     scene background bedroom with fade
     show screen z
     show friz otojasleeping with easeinbottom
-    pause 2.0
-    show friz otojanotsleeping
+    pause 1.0
+    show friz otojaopen
     pause 1.0
     show friz otoja
     show background bedroom blurr
 
     Friz "Nic nie stawia na nogi lepiej niż świadomość bycia multimiliardem."
     pause 1.0
-    show friz main
+    show friz main angry
     Friz "Niestety nie każdy dysponuje budżetem pozwalającym na tego typu zastrzyk energii."
 
-    transform frizi:
-        linear 1.0 xanchor 100
-        pause 1.0
     show friz at START_POS_FRIZ with move
 
     show nowciax at START_POS_NOWCIAX with moveinbottom
@@ -26,10 +23,9 @@
     #show friz main_talking
     Friz "Zakup mojego kursu."
     #show friz main
-    show nowciax kropla angry
-    Nowciax "..."
+    show nowciax kropla reactions sweatdrop
     pause 1.0
-    show nowciax opowiadajacy -angry
+    show nowciax opowiadajacy -sweatdrop
     Nowciax "Najnowszy energetyk ekipy"
     #show "EKIPUP" with vpunch
     #show nowciax main
