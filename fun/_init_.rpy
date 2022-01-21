@@ -74,11 +74,12 @@ define config.automatic_images = ['/']
 define config.automatic_images_strip = ['images']
 
 ###### GUI ######
-
+define FONT_CHERI = os.path.join(FONTS_PATH, "CHERI___.TTF")
 define gui.text_font = os.path.join(FONTS_PATH, "Ubuntu-Regular.ttf")
 define gui.name_text_font = os.path.join(FONTS_PATH, "Bubblegum.ttf")
 define gui.text_size = 25
 define gui.name_text_size = 55
+
 #define _preferences.show_empty_window = True
 
 ####### STYLE ######
@@ -100,3 +101,32 @@ style say_dialogue:
     xpos 100
     yalign 0.6
     xsize gui.dialogue_width
+
+style bum:
+    font FONT_CHERI
+    size 50
+    xanchor 0.5 yanchor 0.5
+image top_text = ParameterizedText(style="bum")
+
+define flash = Fade(0.1, 0.0, 0.5, color="#fff")
+
+define punch_flash = MultipleTransition([
+        False, hpunch,
+        False, Pause(0.2),
+        False, hpunch,
+        False, Pause(0.3),
+        False, flash,
+        False, Pause(0.3),
+        False, hpunch,
+        False, Pause(0.2),
+        False, flash,
+        True])
+define BUBBLE = "bubble.png"
+init python:
+    def comic_text(text, bubble=BUBBLE):
+        return LiveComposite(
+            renpy.image_size(bubble),
+            (0, 0), bubble,
+            (0.0, 0.0), Text(text, style="bum"))#"top_text \"{}\"".format(text))
+
+image tt = comic_text("dsadasd")

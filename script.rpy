@@ -1,5 +1,5 @@
 ﻿label start:
-    #jump test
+    jump test
     scene background bedroom with fade
     show screen z
     show friz otojasleeping with easeinbottom

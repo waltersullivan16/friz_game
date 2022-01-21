@@ -1,11 +1,13 @@
 label test:
     scene background bedroom with a
     show screen z
+    show tt
 
     #$ Friz.show({"body": "otoja"})
     #$ renpy.with_statement(Fade(0.5, 0.0, 0.5))
-    show friz otoja
+    #show friz otoja
     $condition=1
+    pause 20.0
     #show reactions luv behind friz at Position(xpos=0.4, ypos=0.4) zorder 10
     #Friz "dsaehfsdjhfjskdfhjsdkfhjksd fdshdsjkfhsdjkfh s"
     pause 1.0

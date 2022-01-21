@@ -18,12 +18,6 @@ init python:
             print(position_array)
             return [position_array[0], position_array[2]]
 
-    template = lambda name: """
-        layeredimage {}:
-            group body auto:
-                attribute main default".format(name)
-    """
-
 
 layeredimage friz:
     group body auto:
@@ -39,12 +33,8 @@ layeredimage friz:
 
     if FrizClass.talking:
         "friz_usta" at FRIZ_MOUTH_POSITION
+
 # NOWCIAX
-
-image reaction = ConditionSwitch(
-    "condition == 1", "reactions/reactions danger.png",
-    "condition == 2", "reactions/reactions angry.png")
-
 layeredimage nowciax:
     group body auto:
         attribute main default
