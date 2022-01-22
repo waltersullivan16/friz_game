@@ -81,5 +81,4 @@ init python:
 
         def stop_talking(self):
             self.show({"mouth": "closed"})
-    #Frizz = Characterr("FRIZ", image="friz", color='#000000')
-    #Nowciaxx = Characterr("NOWCIAX", image="nowciax", color='#05232f', pos=pos_nowciax)
+    encu = Encyclopaedia()

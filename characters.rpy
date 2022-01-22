@@ -32,7 +32,7 @@ layeredimage friz:
             "reaction_angry"
 
     if FrizClass.talking:
-        "friz_usta" at FRIZ_MOUTH_POSITION
+        "friz_usta" at COMPOSITION["FRIZ"]["mouth"]
 
 # NOWCIAX
 layeredimage nowciax:
@@ -43,4 +43,4 @@ layeredimage nowciax:
         attribute normal default null
 
     if NowciaxClass.talking:
-        "nowciax_usta" at NOWCIAX_MOUTH_POSITION
+        "nowciax_usta" at COMPOSITION["NOWCIAX"]["mouth"]

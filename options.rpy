@@ -91,6 +91,9 @@ define config.after_load_transition = None
 
 define config.end_game_transition = None
 
+define config.automatic_images = AUTOMATIC_IMAGES
+define config.automatic_images_strip = AUTOMATIC_IMAGES_STRIP
+
 
 ## A variable to set the transition used when the game starts does not exist.
 ## Instead, use a with statement after showing the initial scene.

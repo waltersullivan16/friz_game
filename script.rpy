@@ -1,5 +1,5 @@
 ﻿label start:
-    jump test
+    #jump test
     scene background bedroom with fade
     show screen z
     show friz otojasleeping with easeinbottom
@@ -14,9 +14,9 @@
     show friz main angry
     Friz "Niestety nie każdy dysponuje budżetem pozwalającym na tego typu zastrzyk energii."
 
-    show friz at START_POS_FRIZ with move
+    show friz at Position(xpos=0.3) with move
 
-    show nowciax at START_POS_NOWCIAX with moveinbottom
+    show nowciax at Position(xpos=0.6) with moveinbottom
     Nowciax "Nie martwcie się jednak niezamożne istoty, wasza dobroduszna ekipa znalazła remedę na wasze problemy, mianowicie..."
     #show nowciax
 
