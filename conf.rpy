@@ -1,7 +1,8 @@
 init -10 python:
     import os
+    import string
     from functools import partial
-    import logging
+    from collections import namedtuple
     from itertools import chain
 
     ####### CONSTS #####
@@ -121,3 +122,9 @@ style bum:
     xanchor 0.5 yanchor 0.5
 
 image tt = comic_text_maker("dsadasd")
+init python:
+    ii = renpy.list_images()
+
+    def iq(name):
+        return list(filter(lambda x: x.startswith(name), ii))
+    fi = iq('friz')

@@ -1,39 +1,36 @@
 ﻿label start:
     #jump test
-    scene background bedroom with fade
+    scene bedroom with fade
     show screen z
     show friz otojasleeping with easeinbottom
     pause 1.0
     show friz otojaopen
     pause 1.0
     show friz otoja
-    show background bedroom blurr
+    show bedroom blurr
 
     Friz "Nic nie stawia na nogi lepiej niż świadomość bycia multimiliardem."
     pause 1.0
-    show friz main angry
+
     Friz "Niestety nie każdy dysponuje budżetem pozwalającym na tego typu zastrzyk energii."
 
     show friz at Position(xpos=0.3) with move
 
     show nowciax at Position(xpos=0.6) with moveinbottom
     Nowciax "Nie martwcie się jednak niezamożne istoty, wasza dobroduszna ekipa znalazła remedę na wasze problemy, mianowicie..."
-    #show nowciax
 
-    #show friz main_talking
     Friz "Zakup mojego kursu."
-    #show friz main
-    show nowciax kropla reactions sweatdrop
+    show nowciax kropla
     pause 1.0
-    show nowciax opowiadajacy -sweatdrop
+    show nowciax opowiadajacy
     Nowciax "Najnowszy energetyk ekipy"
-    #show "EKIPUP" with vpunch
-    #show nowciax main
+    $ a= comic_text_maker("EKIPUP")
+    show a
+    show ekipup_text with vpunch
 
     Friz "Montażysta, reklame poprosze."
 
     #$ renpy.movie_cutscene("ekipup.webm")
-#show movbie
     Friz "Nie zwlekajcie moi drodzy, już teraz biegnijcie do rodziców i poproście, aby kupili wam całą zgrzewkę."
     Nowciax "Dodam jeszcze, że eipup występuje w dwóch przepysznie orzeźwiających wariantach smakowych."
     Friz "Moim faworytem jest smak cytrynowego napoju ekipy."

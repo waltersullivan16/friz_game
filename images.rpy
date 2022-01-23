@@ -1,20 +1,14 @@
-### PATHS
-
-image vid ekipup = Movie("ekipup.mkv", (0,0), (0,0))
-image background bedroom blurr = im.Blur("background/bedroom.png", 1.5)
-
+### REACTIONS
+image reaction_luv = At("luv", beating)
 image reaction_sweatdrop = At("sweatdrop", dropping)
-image reaction_luv = At("reactions/luv.png", beating)
-image reaction_angry = At("reactions/angry.png", beating)
-image reaction_angry2 = At("reactions/angry2.png", beating)
+image reaction_angry = At("angry", beating)
+image reaction_angry2 = At("angry2", beating)
 
-image friz_usta = Animation(*mouth_animation('friz'))
-#image friz love = Animation(*animation('friz', CHARACTER_ANIMATION_PATH, 'love'))
+### VIDEOS
+image vid ekipup = Movie("ekipup.mkv", (0,0), (0,0))
 
-image nowciax_usta  = Animation(*mouth_animation('nowciax'))
+### BACKGROUND
+image bedroom = "background/bedroom.png"
+image bedroom blurr = im.Blur("background/bedroom.png", 1.5)
 
-define FrizClass = Characterr("FRIZ", image="friz")
-
-define NowciaxClass = Characterr("NOWCIAX", image="nowciaxx")
-define Nowciax = NowciaxClass.char
-define Friz = FrizClass.char
+image ekipup_text = comic_text_maker("EKIPUP")
